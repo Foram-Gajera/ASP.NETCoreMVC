@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<br />
+<div class="container row m-0 p-0">
+    <div class="col-6 m-0">
+        <h2 class="text-info">User List </h2>
+    </div>
+    <div class="col-6 m-0">
+        <a asp-action="Upsert" asp-controller="Users" class="float-right btn btn-info text-white">Create New User</a>
+    </div>
+</div>
+
+<div class="col-12 border p-2">
+    Colmn to diaplay:
+    <select class="toggleCol" multiple="multiple" id="toggleCol">
+        <option value="0">Name</option>
+        <option value="1">Email</option>
+        <option value="2">Password</option>
+    </select>
+    <table id="UsersTable" class="table table-striped table-bordered table-hover responsive" width="100%">
+        <thead class="thin-border-bottom">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th></th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+@section Scripts{ 
+<script src="~/js/UserList.js"></script>
+}
+
